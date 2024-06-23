@@ -1,0 +1,81 @@
+.app-container {
+  display: flex;
+}
+.content {
+  width: 100%;
+}
+.sidebar {
+  min-height:800px;
+  
+}
+.post-card{
+  margin:20px 50px ;
+  
+  min-width: 20rem !important;
+}
+.tag{
+  margin:0px 2px;
+}
+.likes{
+  margin-top: 5px;
+}
+.create-post{
+  width: 80%;
+  margin-top: 50px;
+  margin-left: 10%;
+}
+.delete{
+  cursor: pointer;
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust based on your layout */
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sidebar.css */
+.sidebar {
+  min-height: 800px;
+  transition: transform 0.3s ease;
+
+}
+@media (max-width: 767.98px) {
+  .sidebar {
+    position: absolute;
+    height: 100%;
+    z-index: 2;
+  }
+
+  .sidebar-open {
+    transform: translateX(-520px) rotate(90deg);
+    border-radius: 8px;
+    bottom: 72px;
+  }
+  .sidebar-name{
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+  }
+  .header{
+width: 100%;
+
+}
+}
+
+
+
