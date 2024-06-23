@@ -33,6 +33,9 @@
   align-items: center;
   height: 100vh; /* Adjust based on your layout */
 }
+.header{
+   position: fixed ;
+}
 
 .spinner {
   border: 16px solid #f3f3f3; /* Light grey */
@@ -56,9 +59,18 @@
 }
 @media (max-width: 767.98px) {
   .sidebar {
-    position: absolute;
-    height: 100%;
+    position: fixed;
     z-index: 2;
+    height: 100%;
+  }
+  .header{
+   z-index: 5;
+    width: 100%;
+  }
+  .main-list{
+    position: relative;
+    top: 230px;
+    z-index: 1px;
   }
 
   .sidebar-open {
@@ -71,10 +83,7 @@
     bottom: 20px;
     left: 20px;
   }
-  .header{
-width: 100%;
-
-}
+ 
 }
 
 

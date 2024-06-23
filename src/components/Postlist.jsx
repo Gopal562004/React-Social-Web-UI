@@ -21,7 +21,7 @@ const Postlist = () => {
 //   }, [addInitialPosts]);
 
   return (
-    <div className="post-list">
+    <div className="post-list main-list">
       {loading ? (
         <LoadingSpinner/>
       ) : (
