@@ -3,5 +3,15 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/React-Social-Web-UI/", // Adjust the base path according to your GitHub Pages URL
+  base: "/React-Social-Web-UI/",
+  server: {
+    middlewareMode: "html",
+    setupMiddlewares: (middlewares) => {
+      middlewares.use((req, res, next) => {
+        res.setHeader("Permissions-Policy", "interest-cohort=()");
+        next();
+      });
+      return middlewares;
+    },
+  },
 });
